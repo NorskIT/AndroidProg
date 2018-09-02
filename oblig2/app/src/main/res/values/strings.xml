@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">oblig2</string>
+    <string name="beOmBildeIntent">Sender et intent om kamera app</string>
+    <string name="item_3">Item 3</string>
+</resources>

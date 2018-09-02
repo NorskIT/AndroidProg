@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Ekstra menu" -->
+    <item
+        android:id="@+id/item1"
+        android:title="Item 1"
+        android:icon="@drawable/ic_apps_black_24dp"
+        app:showAsAction="ifRoom" >
+        <menu>
+            <item android:id="@+id/sub1Item1"
+                android:title="Item 1"/>
+            <item android:id="@+id/sub1Item2"
+                android:title="Item 2"/>
+        </menu>
+    </item>
+
+    <!-- Original menu -->
+    <item android:id="@+id/item2"
+        android:title="Item 2"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/item3"
+        android:title="item_3"
+        app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/subitem1"
+                android:title="Sub item 1"/>
+
+            <item android:id="@+id/subitem2"
+                android:title="Sub item 2"/>
+        </menu>
+
+    </item>
+</menu>

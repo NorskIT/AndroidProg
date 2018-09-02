@@ -2,4 +2,5 @@
     <string name="app_name">Hello World</string>
     <string name="edit_message">Skriv inn en melding</string>
     <string name="button_send">Send</string>
+    <string name="upAnAmountButton">Adds a click</string>
 </resources>

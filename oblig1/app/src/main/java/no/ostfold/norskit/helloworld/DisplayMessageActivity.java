@@ -6,9 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class DisplayMessageActivity extends AppCompatActivity{
+    Bundle CurrentBundle;
+    int amountPressed = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        CurrentBundle = savedInstanceState;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.active_display_message);
 
@@ -18,7 +21,8 @@ public class DisplayMessageActivity extends AppCompatActivity{
 
         //fanger layoute sitt TextView og endrer teksten til bestem string.
         TextView textView = findViewById(R.id.textView);
-        textView.setText(message);
+        textView.setText("Hei " + message);
     }
+
 
 }
