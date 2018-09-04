@@ -15,11 +15,15 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
-
+    private ImageView thumbBilde;
+    private Bitmap imageBitmap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if(savedInstanceState != null) {
+            thumbBilde.setImageBitmap(imageBitmap);
+        }
     }
 
     @Override
@@ -47,9 +51,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode,Intent data) {
         if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            ImageView thumbBilde = findViewById(R.id.thumbnailImage);
+            imageBitmap = (Bitmap) extras.get("data");
+            thumbBilde = findViewById(R.id.thumbnailImage);
             thumbBilde.setImageBitmap(imageBitmap);
+
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
     }
 }
